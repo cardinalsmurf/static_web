@@ -9,5 +9,5 @@ VOLUME [ "/opt/cavalry" ]
 ADD stuff.tar /opt/cavalry/
 HEALTHCHECK --interval=10s --timeout=1m --retries=5 CMD curl http://localhost || exit 1
 ENTRYPOINT [ "/usr/sbin/nginx" ]
-CMD [ "-h" ]
+CMD [ "-g", "daemon off;" ]
 
